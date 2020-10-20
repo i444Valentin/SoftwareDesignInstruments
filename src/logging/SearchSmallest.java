@@ -1,7 +1,21 @@
 package logging;
 
+import java.io.FileInputStream;
+import java.util.logging.LogManager;
+import java.util.logging.Logger;
+
+
 public class SearchSmallest {
-    static int F(int x) {
+    static Logger logger;
+    static {
+        try(FileInputStream configFile = new FileInputStream("C:\\Users\\Walentin\\LoggerConfigs\\configuration.config")){
+            LogManager.getLogManager().readConfiguration(configFile);
+            logger = Logger.getLogger(SearchSmallest.class.getName());
+        }catch (Exception ignore){
+            ignore.printStackTrace();
+        }
+    }
+    private static int function(int x) {
         return (x * x - 9) * (x * x - 9) + 5;
     }
 
@@ -10,11 +24,11 @@ public class SearchSmallest {
         a = -13;
         b = 13;
         M = a;
-        R = F(a);
+        R = function(a);
         for (t = a; t <= b; t++) {
-            if (F(t) < R) {
+            if (function(t) < R) {
                 M = t;
-                R = F(t);
+                R = function(t);
             }
         }
         System.out.println(M + 7);
