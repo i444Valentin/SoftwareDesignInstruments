@@ -1,0 +1,118 @@
+<METRICS profile="Lines of code metrics" timestamp="Пт, 4 дек 2020 19:06:21 MSK">
+	<METRIC category="Package" name="Lines of code" abbreviation="LOC">
+		<VALUE measured="logging" value="40.0"/>
+		<VALUE measured="loggingTest" value="59.0"/>
+		<VALUE measured="logging.loggerConfigurations" value="7.0"/>
+		<VALUE measured="loggingTest.loggerConfigurations" value="7.0"/>
+	</METRIC>
+	<METRIC category="Package" name="Lines of code (recursive)" abbreviation="LOC(rec)">
+		<VALUE measured="" value="113.0"/>
+		<VALUE measured="logging" value="47.0"/>
+		<VALUE measured="loggingTest" value="66.0"/>
+		<VALUE measured="logging.loggerConfigurations" value="7.0"/>
+		<VALUE measured="loggingTest.loggerConfigurations" value="7.0"/>
+	</METRIC>
+	<METRIC category="Package" name="Lines of product code" abbreviation="LOCp">
+		<VALUE measured="logging" value="40.0"/>
+		<VALUE measured="loggingTest" value="59.0"/>
+		<VALUE measured="logging.loggerConfigurations" value="7.0"/>
+		<VALUE measured="loggingTest.loggerConfigurations" value="7.0"/>
+	</METRIC>
+	<METRIC category="Package" name="Lines of product code (recursive)" abbreviation="LOCp(rec)">
+		<VALUE measured="" value="113.0"/>
+		<VALUE measured="logging" value="47.0"/>
+		<VALUE measured="loggingTest" value="66.0"/>
+		<VALUE measured="logging.loggerConfigurations" value="7.0"/>
+		<VALUE measured="loggingTest.loggerConfigurations" value="7.0"/>
+	</METRIC>
+	<METRIC category="Package" name="Lines of test code" abbreviation="LOCt">
+		<VALUE measured="logging" value="0.0"/>
+		<VALUE measured="loggingTest" value="0.0"/>
+		<VALUE measured="logging.loggerConfigurations" value="0.0"/>
+		<VALUE measured="loggingTest.loggerConfigurations" value="0.0"/>
+	</METRIC>
+	<METRIC category="Package" name="Lines of test code (recursive)" abbreviation="LOCt(rec)">
+		<VALUE measured="" value="0.0"/>
+		<VALUE measured="logging" value="0.0"/>
+		<VALUE measured="loggingTest" value="0.0"/>
+		<VALUE measured="logging.loggerConfigurations" value="0.0"/>
+		<VALUE measured="loggingTest.loggerConfigurations" value="0.0"/>
+	</METRIC>
+	<METRIC category="Module" name="Lines of Groovy" abbreviation="L(Groovy)">
+		<VALUE measured="Software Design Instruments" value="0.0"/>
+	</METRIC>
+	<METRIC category="Module" name="Lines of HTML" abbreviation="L(HTML)">
+		<VALUE measured="Software Design Instruments" value="0.0"/>
+	</METRIC>
+	<METRIC category="Module" name="Lines of Java" abbreviation="L(J)">
+		<VALUE measured="Software Design Instruments" value="99.0"/>
+	</METRIC>
+	<METRIC category="Module" name="Lines of Kotlin" abbreviation="L(KT)">
+		<VALUE measured="Software Design Instruments" value="0.0"/>
+	</METRIC>
+	<METRIC category="Module" name="Lines of XML" abbreviation="L(XML)">
+		<VALUE measured="Software Design Instruments" value="0.0"/>
+	</METRIC>
+	<METRIC category="Module" name="Lines of code" abbreviation="LOC">
+		<VALUE measured="Software Design Instruments" value="7230.0"/>
+	</METRIC>
+	<METRIC category="Module" name="Lines of product code" abbreviation="LOCp">
+		<VALUE measured="Software Design Instruments" value="113.0"/>
+	</METRIC>
+	<METRIC category="Module" name="Lines of test code" abbreviation="LOCt">
+		<VALUE measured="Software Design Instruments" value="0.0"/>
+	</METRIC>
+	<METRIC category="Module" name="Non-comment lines of code" abbreviation="NCLOC">
+		<VALUE measured="Software Design Instruments" value="116.0"/>
+	</METRIC>
+	<METRIC category="Module" name="Non-comment lines of code (product)" abbreviation="NCLOCp">
+		<VALUE measured="Software Design Instruments" value="113.0"/>
+	</METRIC>
+	<METRIC category="Module" name="Non-comment lines of code (test)" abbreviation="NCLOCt">
+		<VALUE measured="Software Design Instruments" value="0.0"/>
+	</METRIC>
+	<METRIC category="FileType" name="Lines of code" abbreviation="LOC">
+		<VALUE measured="Java" value="99.0"/>
+		<VALUE measured="Erlang Terms File" value="14.0"/>
+		<VALUE measured="Text" value="7114.0"/>
+		<VALUE measured=".gitignore (GitIgnore)" value="3.0"/>
+	</METRIC>
+	<METRIC category="FileType" name="Non-comment lines of code" abbreviation="NCLOC">
+		<VALUE measured="Java" value="99.0"/>
+		<VALUE measured="Erlang Terms File" value="14.0"/>
+		<VALUE measured=".gitignore (GitIgnore)" value="3.0"/>
+	</METRIC>
+	<METRIC category="Project" name="Lines of Groovy" abbreviation="L(Groovy)">
+		<VALUE measured="project" value="0.0"/>
+	</METRIC>
+	<METRIC category="Project" name="Lines of HTML" abbreviation="L(HTML)">
+		<VALUE measured="project" value="0.0"/>
+	</METRIC>
+	<METRIC category="Project" name="Lines of Java" abbreviation="L(J)">
+		<VALUE measured="project" value="99.0"/>
+	</METRIC>
+	<METRIC category="Project" name="Lines of Kotlin" abbreviation="L(KT)">
+		<VALUE measured="project" value="0.0"/>
+	</METRIC>
+	<METRIC category="Project" name="Lines of XML" abbreviation="L(XML)">
+		<VALUE measured="project" value="0.0"/>
+	</METRIC>
+	<METRIC category="Project" name="Lines of code" abbreviation="LOC">
+		<VALUE measured="project" value="7230.0"/>
+	</METRIC>
+	<METRIC category="Project" name="Lines of product code" abbreviation="LOCp">
+		<VALUE measured="project" value="113.0"/>
+	</METRIC>
+	<METRIC category="Project" name="Lines of test code" abbreviation="LOCt">
+		<VALUE measured="project" value="0.0"/>
+	</METRIC>
+	<METRIC category="Project" name="Non-comment lines of code" abbreviation="NCLOC">
+		<VALUE measured="project" value="116.0"/>
+	</METRIC>
+	<METRIC category="Project" name="Non-comment lines of code (product)" abbreviation="NCLOCp">
+		<VALUE measured="project" value="113.0"/>
+	</METRIC>
+	<METRIC category="Project" name="Non-comment lines of code (test)" abbreviation="NCLOCt">
+		<VALUE measured="project" value="0.0"/>
+	</METRIC>
+</METRICS>

@@ -1,0 +1,123 @@
+package ru.mla.obfuscator;
+
+import java.io.FileWriter;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.List;
+
+/**
+ * Класс для реализации мини-обфускатора
+ *
+ * @author Mironova L.A.
+ */
+public class Obfuscator {
+    public static void main(String[] args) {
+        String fileWay = "src\\ru\\mla\\obfuscator\\Main.java";
+
+        String listLine = fileReader(fileWay);
+        out(listLine);
+
+        String multiLine = deleteComment(deleteGaps(listLine));
+        String fileName = getFileName(fileWay);
+        String renameMultiLine = replaceFileName(multiLine, fileName);
+        String newFileWay = newFileWay(fileWay, fileName);
+
+        print(renameMultiLine, newFileWay);
+    }
+
+    /**
+     * Считывает информацию из файла
+     *
+     * @return мультистроку
+     */
+    private static String fileReader(String fileWay) {
+        StringBuilder listLine = new StringBuilder();
+        try {
+            List<String> list = Files.readAllLines(Paths.get(fileWay));
+            //получение мультистроки
+            for (String s : list) {
+                listLine.append(s); //listLine += s
+            }
+        } catch (IOException e) {
+            System.out.println("not found");
+        }
+        return listLine.toString();
+    }
+
+    /**
+     * Удаляет комментарии
+     *
+     * @param listLine мультистрока
+     * @return мультистроку без комментариев
+     */
+    private static String deleteComment(String listLine) {
+        return listLine.replaceAll("(/\\*.+?\\*/)|(//.+?)[:;a-zA-Zа-яА-ЯЁё]*", "");
+    }
+
+    /**
+     * Меняет имя класса в файле
+     *
+     * @param multiLine мультистрока без комментариев
+     * @return мультистроку с измененным именем класса
+     */
+    private static String replaceFileName(String multiLine, String fileName) {
+        String fileNewName = "New" + fileName;
+        return multiLine.replaceAll(fileName, fileNewName);
+    }
+
+    /**
+     * Получает имя из пути файла без расшрения
+     *
+     * @param fileWay путь файла
+     * @return файл без расширения
+     */
+    private static String getFileName(String fileWay) {
+        Path p = Paths.get(fileWay);
+        String fileName = p.getFileName().toString();
+        return fileName.replaceAll("\\..*", "");
+    }
+
+    /**
+     * Заменяет один и более пробелов на один
+     *
+     * @param listLine мультистрока
+     * @return измененную мультистроку
+     */
+    private static String deleteGaps(String listLine) {
+        return listLine.replaceAll("\\s+(?![^\\d\\s])", "");
+    }
+
+    /**
+     * Меняет имя файла в пути
+     *
+     * @return полное новое имя файла
+     */
+    private static String newFileWay(String fileWay, String fileName) {
+        return fileWay.replaceAll(fileName, "\\New" + fileName);
+    }
+
+    /**
+     * Записывает мультистроку в файл
+     *
+     * @param renameMultiLine мультистрока без комментариев с новым именем класса
+     * @param newFileWay      измененный путь файла
+     */
+    private static void print(String renameMultiLine, String newFileWay) {
+        try (FileWriter writer = new FileWriter(newFileWay)) {
+            writer.write(renameMultiLine);
+        } catch (IOException ex) {
+            System.out.println(ex.getMessage());
+        }
+    }
+
+    /**
+     * Выводит мультистроку в консоль
+     *
+     * @param listLine мультистрока
+     */
+    private static void out(String listLine) {
+        System.out.println(listLine);
+    }
+}
