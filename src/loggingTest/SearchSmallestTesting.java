@@ -16,7 +16,7 @@ public class SearchSmallestTesting {
             ignore.printStackTrace();
         }
     }
-    public static int function(int x) {
+   static int function(int x) {
         logger.log(Level.INFO, "Выполнение функции задачи");
         return (x * x - 9) * (x * x - 9) + 5;
     }
@@ -36,7 +36,7 @@ public class SearchSmallestTesting {
         logger.log(Level.INFO, "Конец программы");
     }
 
-    public static int taskRelease(int a, int b, int M, int R, int t) {
+    static int taskRelease(int a, int b, int M, int R, int t) {
         for (t = a; t <= b; t++) {
             logger.log(Level.INFO, "Проверка условия { function(t) < R} ");
             if (function(t) < R) {
